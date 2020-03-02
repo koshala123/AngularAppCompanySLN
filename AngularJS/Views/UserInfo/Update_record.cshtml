@@ -1,0 +1,104 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Index</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div ng-app="UserApp" ng-controller="UserController" data-ng-init="loadrecord(@Convert.ToInt32(Request.QueryString["Id"]))">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-2"></div>
+
+                <div class="col-sm-8">
+
+                    <div class="form-group">
+
+                        <label>AccountName</label>
+
+                        <input type="text" ng-model="registration.AccountName" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>DisplayName</label>
+
+                        <input type="text" ng-model="registration.DisplayName" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input type="text" ng-model="registration.Email" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Designation</label>
+
+                        <input type="text" ng-model="registration.Designation" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Department</label>
+
+                        <input type="text" ng-model="registration.Department" class="form-control" />
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="registration.Active">
+
+                        <label class="form-check-label" for="exampleCheck1">Active</label>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="button" class="btn btn-primary" ng-click="updatedata()" value="{{btntext}}" />
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-2"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/AngularController/HomeAngularJs.js"></script>
+
+
+</body>
+
+</html>

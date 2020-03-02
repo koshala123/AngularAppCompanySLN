@@ -1,0 +1,143 @@
+﻿@{
+
+    Layout = null;
+
+}
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Show All Data</title>
+
+    <style>
+        .tableData {
+            border-left: solid 1px #D8C3C3;
+            border-top: solid 1px #D8C3C3;
+        }
+
+            .tableData tr {
+            }
+
+            .tableData td, .tableData th {
+                border-right: solid 1px #D8C3C3;
+                border-bottom: solid 1px #D8C3C3;
+                text-align: left;
+                padding: 5px;
+            }
+
+            .tableData td {
+            }
+
+            .tableData th {
+                background-color: #FAFAFA;
+                padding: 7px 5px;
+                border-bottom-color: #9C9C9C;
+            }
+
+        .odd {
+            background-color: #f3f3f3;
+        }
+
+        .even {
+            background-color: #ffffff;
+        }
+    </style>
+
+
+
+</head>
+
+<body ng-app="CompanyApp">
+
+    <div ng-controller="CompanyController">
+
+        <table class="tableData">
+
+            <tr>
+
+                <th>Id</th>
+
+                <th>Company Name</th>
+
+                <th>System Name</th>
+
+                <th>Issue Type</th>
+
+                <th>Class Name</th>
+
+                <th>Method Name</th>
+
+                <th>Request Date</th>
+
+                <th>Request Number</th>
+
+                <th>Request Name</th>
+
+                <th>Status</th>
+
+                <th>Comment</th>
+
+                <th>Error</th>
+
+                <th>Due Days</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+            <tr ng-repeat="e in record" ng-class-even="'even'" ng-class-odd="'odd'">
+
+                <td>{{e.Id}}</td>
+
+                <td>{{e.CompanyName}}</td>
+
+                <td>{{e.SystemName}}</td>
+
+                <td>{{e.IssueType}}</td>
+
+                <td>{{e.ClassName}}</td>
+
+                <td>{{e.MethodName}}</td>
+
+                <td>{{e.RequestDate}}</td>
+
+                <td>{{e.RequestNumber}}</td>
+
+                <td>{{e.RequestName}}</td>
+
+                <td>{{e.Status}}</td>
+
+                <td>{{e.Comment}}</td>
+
+                <td>{{e.Error}}</td>
+
+                <td>{{e.DueDays}}</td>
+
+                
+
+                <td><a href="/Company/UpdateView?id={{e.Id}}">Update</a></td>
+
+                <td><a ng-click="deleterecord(e.Id)">Delete</a></td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <script src="~/Scripts/angular.min.js"></script>
+
+    <script src="~/Scripts/AngularController/CompanyAngularJS.js"></script>
+
+
+</body>
+
+</html>

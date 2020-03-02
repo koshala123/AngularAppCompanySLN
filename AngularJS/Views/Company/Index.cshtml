@@ -1,0 +1,167 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Index</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/jquery.datetimepicker.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div ng-app="CompanyApp" ng-controller="CompanyController">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-2"></div>
+
+                <div class="col-sm-8">
+
+                    <div class="form-group">
+
+                        <label>CompanyName</label>
+
+                        <input type="text" ng-model="company.CompanyName" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>SystemName</label>
+
+                        <input type="text" ng-model="company.SystemName" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Issue Type</label>
+
+                        <input type="text" ng-model="company.IssueType" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Class Name</label>
+
+                        <input type="text" ng-model="company.ClassName" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Method Name</label>
+
+                        <input type="text" ng-model="company.MethodName" class="form-control" />
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Created Date</label>
+                        <input type="date"  ng-model="company.RequestDate" class="form-control">
+
+                    </div>
+
+             
+
+                    <div class="form-group">
+
+                        <label>Request Number</label>
+
+                        <input type="text" ng-model="company.RequestNumber" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Request Name</label>
+
+                        <select ng-model="company.RequestName">
+                            <option ng-repeat="x in user" value="{{x.Id}}">{{x.DisplayName}}</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+                        <select ng-model="company.Status">
+                            <option value="1">Open</option>
+                            <option value="2">Close</option>
+                            <option value="3">In Progree</option>
+                            <option value="4">Hold</option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Comment</label>
+
+                        <input type="text" ng-model="company.Comment" class="form-control" />
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Error</label>
+
+                        <input type="text" ng-model="company.Error" class="form-control" />
+
+                    </div>
+
+                    <div class="form-check">
+
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model="company.Active">
+
+                        <label class="form-check-label" for="exampleCheck1">Active</label>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <input type="button" class="btn btn-primary" ng-click="savedata()" value="{{btntext}}" />
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-2"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+   
+    
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/AngularController/CompanyAngularJS.js"></script>
+
+
+</body>
+
+</html>
+                                                                    
